@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Card } from '../Card'
 
-const Card = styled.div`
+const Container = styled.div`
   width: 85vw;
   margin: 0 auto;
   display: grid;
@@ -9,4 +10,10 @@ const Card = styled.div`
   grid-gap: 20px;
 `
 
-export const CardList = props => <Card>{props.children}</Card>
+export const CardList = ({ users }) => (
+  <Container>
+    {users.map(user => (
+      <Card user={user} key={user.id} />
+    ))}
+  </Container>
+)

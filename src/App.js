@@ -23,11 +23,7 @@ export default class App extends Component {
 
     return (
       <>
-        <CardList>
-          {users.map(user => (
-            <h1 key={user.id}>{user.name}</h1>
-          ))}
-        </CardList>
+        <CardList users={users} />
       </>
     )
   }
