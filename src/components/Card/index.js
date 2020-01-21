@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Container = styled.h1`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #95dada;
@@ -9,6 +9,7 @@ const Container = styled.h1`
   border-radius: 5px;
   padding: 25px;
   cursor: pointer;
+  text-align: center;
   -moz-osx-font-smoothing: grayscale;
   backface-visibility: hidden;
   transform: translateZ(0);
@@ -18,4 +19,10 @@ const Container = styled.h1`
   }
 `
 
-export const Card = ({ user }) => <Container>{user.name}</Container>
+export const Card = ({ user }) => (
+  <Container>
+    <img alt="monster" src={`https://robohash.org/${user.id}?set=set2`}></img>
+    <h1>{user.name}</h1>
+    <h3>{user.email}</h3>
+  </Container>
+)

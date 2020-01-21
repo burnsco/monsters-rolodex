@@ -4,7 +4,7 @@ import { Card } from '../Card'
 
 const Container = styled.div`
   width: 85vw;
-  margin: 0 auto;
+  margin: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
