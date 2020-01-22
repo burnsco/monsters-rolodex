@@ -31,10 +31,10 @@ export default class App extends Component {
 
     return (
       <>
-        <input
-          type="text"
+        <SearchBox
+          type="search"
           value={input}
-          onChange={e => this.handleChange(e)}
+          handleChange={e => this.handleChange(e)}
           placeholder="enter search here..."
         />
 

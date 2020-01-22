@@ -21,7 +21,10 @@ const Container = styled.div`
 
 export const Card = ({ user }) => (
   <Container>
-    <img alt="monster" src={`https://robohash.org/${user.id}?set=set2`}></img>
+    <img
+      alt="monster"
+      src={`https://robohash.org/${user.id}?set=set2&size=180x180`}
+    ></img>
     <h1>{user.name}</h1>
     <h3>{user.email}</h3>
   </Container>
