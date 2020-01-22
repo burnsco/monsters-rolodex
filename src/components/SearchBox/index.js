@@ -2,20 +2,27 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Search = styled.input`
-  -webkit-appearance: none;
   border: none;
   outline: none;
-  padding: 10px;
-  width: 150px;
-  line-height: 30px;
-  margin-bottom: 30px;
+  line-height: 100px;
+  width: 400px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  font-size: 50px;
+`
+
+const Container = styled.div`
+  text-align: center;
+  width: 100%;
 `
 
 export const SearchBox = ({ placeholder, handleChange, type, value }) => (
-  <Search
-    value={value}
-    type={type}
-    placeholder={placeholder}
-    onChange={handleChange}
-  />
+  <Container>
+    <Search
+      value={value}
+      type={type}
+      placeholder={placeholder}
+      onChange={handleChange}
+    />
+  </Container>
 )

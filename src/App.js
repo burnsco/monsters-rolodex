@@ -19,7 +19,7 @@ export default class App extends Component {
         }))
       )
   }
-  handleChange(e) {
+  handleChange = e => {
     this.setState({ input: e.target.value })
   }
 
@@ -31,11 +31,12 @@ export default class App extends Component {
 
     return (
       <>
+        <h1>Monsters Rolodex</h1>
         <SearchBox
           type="search"
           value={input}
-          handleChange={e => this.handleChange(e)}
-          placeholder="enter search here..."
+          handleChange={this.handleChange}
+          placeholder="search..."
         />
 
         <CardList users={filteredUsers} />

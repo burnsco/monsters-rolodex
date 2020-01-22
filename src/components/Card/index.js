@@ -25,7 +25,7 @@ export const Card = ({ user }) => (
       alt="monster"
       src={`https://robohash.org/${user.id}?set=set2&size=180x180`}
     ></img>
-    <h1>{user.name}</h1>
+    <h2>{user.name}</h2>
     <h3>{user.email}</h3>
   </Container>
 )
